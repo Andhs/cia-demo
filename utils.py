@@ -20,6 +20,7 @@ async def get_images(prompt: str, files: Optional[list] = None):
 
             with st.chat_message("assistant"):  # type: ignore
                 st.write(response.content)
+                st.write(response.code_log)
 
                 # Showing Results
                 for _file in response.files:
